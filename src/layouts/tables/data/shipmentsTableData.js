@@ -19,6 +19,10 @@ Coded by www.creative-tim.com
 import MDTypography from "components/MDTypography";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import MDBox from "components/MDBox";
+import MDButton from "components/MDButton";
+import { Icon } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function data() {
   const [shipmentsData, setShipmentsData] = useState([]);
@@ -34,7 +38,23 @@ export default function data() {
   }, []);
   console.log(shipmentsData);
 
-  const rows = shipmentsData.map((shipment) => ({
+  const Action = ({ id }) => (
+    <MDBox display="flex" alignItem="center">
+      <Link to={`/shipments/${id}`}>
+        <MDBox mr={1}>
+          <MDButton variant="gradient" color="info" iconOnly>
+            <Icon>badge</Icon>
+          </MDButton>
+        </MDBox>
+      </Link>
+      <MDBox mr={1}>
+        <MDButton variant="gradient" color="primary" iconOnly>
+          <Icon>clear</Icon>
+        </MDButton>
+      </MDBox>
+    </MDBox>
+  );
+  const rows = shipmentsData.map((shipment, index) => ({
     orderNo: (
       <MDTypography component="a" variant="caption" color="text" fontWeight="medium">
         {shipment.orderNo}
@@ -65,11 +85,7 @@ export default function data() {
         {shipment.consignee}
       </MDTypography>
     ),
-    action: (
-      <MDTypography component="a" variant="caption" color="text" fontWeight="medium">
-        edit
-      </MDTypography>
-    ),
+    action: <Action id={index + 1} />,
   }));
   return {
     columns: [
