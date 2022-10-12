@@ -52,6 +52,7 @@ import { useMaterialUIController, setMiniSidenav, setOpenConfigurator } from "co
 // Images
 import brandWhite from "assets/images/logo-ct.png";
 import brandDark from "assets/images/logo-ct-dark.png";
+import ShipmentDetail from "layouts/detailPanel";
 
 export default function App() {
   const [controller, dispatch] = useMaterialUIController();
@@ -168,6 +169,7 @@ export default function App() {
         <Routes>
           {getRoutes(routes)}
           <Route path="*" element={<Navigate to="/dashboard" />} />
+          <Route path="/shipments/:id" element={<ShipmentDetail />} />
         </Routes>
       </ThemeProvider>
     </CacheProvider>
@@ -192,6 +194,7 @@ export default function App() {
       <Routes>
         {getRoutes(routes)}
         <Route path="*" element={<Navigate to="/dashboard" />} />
+        <Route path="/shipments/:id" element={<ShipmentDetail />} />
       </Routes>
     </ThemeProvider>
   );
