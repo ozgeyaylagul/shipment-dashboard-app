@@ -28,9 +28,9 @@ import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
 
 // Data
-import shipmentsTableData from "layouts/tables/data/shipmentsTableData";
+import shipmentsTableData from "layouts/shipments/data/shipmentsTableData";
 
-function Tables() {
+function Shipments() {
   const { columns, rows } = shipmentsTableData();
 
   return (
@@ -72,4 +72,4 @@ function Tables() {
   );
 }
 
-export default Tables;
+export default Shipments;

@@ -37,7 +37,7 @@ Coded by www.creative-tim.com
 
 // Material Dashboard 2 React layouts
 import Dashboard from "layouts/dashboard";
-import Tables from "layouts/tables";
+import Shipments from "layouts/shipments";
 import Profile from "layouts/profile";
 
 // @mui icons
@@ -54,11 +54,11 @@ const routes = [
   },
   {
     type: "collapse",
-    name: "Tables",
-    key: "tables",
+    name: "Shipments",
+    key: "shipments",
     icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/tables",
-    component: <Tables />,
+    route: "/shipments",
+    component: <Shipments />,
   },
   {
     type: "collapse",
