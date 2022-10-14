@@ -36,7 +36,6 @@ export default function data() {
   useEffect(() => {
     getShipments().catch((error) => error);
   }, []);
-  console.log(shipmentsData);
 
   const Action = ({ id }) => (
     <MDBox display="flex" alignItem="center">
