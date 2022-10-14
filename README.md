@@ -1,6 +1,6 @@
 # Shipment Dashboard App
 
-This project was created for the Kuehne + Nagel Frontend Developer Internship assigment.
+This project was created for the Kuehne + Nagel Frontend Developer Internship assignment.
 
 Shipments data are displayed in a table. With the button on the table opens to a panel showing the shipment detail in a single row. The values could be changed in the UI.
 
