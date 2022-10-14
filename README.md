@@ -4,7 +4,7 @@ This project was created for the Kuehne + Nagel Frontend Developer Internship as
 
 Shipments data are displayed in a table. With the button on the table opens to a panel showing the shipment detail in a single row. The values could be changed in the UI.
 
-To see the project in action, go to 'link'. 
+To see the project in action, go to [Shipment Dashboard](https://ozgeyaylagul-shipment-dashboard.netlify.app). 
 
 ![Shipment Dashboard App](src/assets/images/Shipment-Dashboard.png)
 
